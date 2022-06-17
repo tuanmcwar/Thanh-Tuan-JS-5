@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-2 left ">
+                <button type="button" class="btn btn-active  btn1 btn-primary1 " id="bai1">Bài 1</button>
+
+                <button type="button" class="btn btn-active  btn1 btn-primary1 " id="bai2">Bài 2</button>
+                <button type="button" class="btn btn-active  btn1 btn-primary1" id="bai3">Bài 3</button>
+                <button type="button" class="btn  btn-active btn1 btn-primary1" id="bai4">Bài 4</button>
+                <!-- <button type="button" class="btn btn-active  btn1 btn-primary1" id="bai5">Bài 5</button>
+                <button type="button" class="btn btn-active  btn1 btn-primary1" id="bai6">Bài 6</button>
+                <button type="button" class="btn  btn-active btn1 btn-primary1" id="bai7">Bài 7</button>
+                <button type="button" class="btn btn-active  btn1 btn-primary1" id="bai8">Bài 8</button> -->
+            </div>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+            <div class="col-10 right">
+                <div class="content_b1 content tran" id="content1">
+                      <h2>🏫 Quản lý tuyển sinh</h2>
+                    <div class="content__text">
+                       <h3>💡Gợi ý:</h3>
+                        <p>
+                           
+                        </p>
+                        <ul>
+                            <li> Điểm chuẩn của hội đồng các bạn tự nhập thêm. Điểm chuẩn của 3 môn thường tối đa 30đ.
+Nên có thể lấy các điểm chuẩn như sau: 30,25,29</li>
+                            <li>Ô nhập khu vực, đối tượng có thể tạo bằng input, dropdown hoặc radio.
+Nếu không thuộc khu vực hoặc đối tượng trong danh sách thì điểm khu vực và điểm đối tượng sẽ là 0</li>
+                            <li>Nếu có 1 trong 3 môn bị điểm 0 thì lặp tức cho rớt không cần kiểm tra tổng điểm có lớn hơn hoặc bằng điểm chuẩn hay không</li>
+                            
+
+                        </ul>
+                    </div>
+                    <form class="row align-items-center content__text--input">
+                        <div class="col-12 col-lg-4">
+                            <input type="number" class="form-control form__input" id="inputNumSan" placeholder="Nhập điểm sàn" />
+                        </div>
+                        <div class="col-12 col-lg-4">
+                        <select class="form-control  form__input" aria-label="Default select example" id="KhuVuc">
+                            <option value="1">Chọn Thành Khu Vực</option>
+                            <option value="2">A</option>
+                            <option value="3">B</option>
+                            <option value="4">C</option>                        
+                       </select>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                        <select class="form-control  form__input " aria-label="Default select example" id="DoiTuong">
+                            <option value="1">Chọn Thành Đối Tượng</option>
+                            <option value="2">1</option>
+                            <option value="3">2</option>
+                            <option value="4">3</option>
+                        </select>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <input type="number" class="form-control form__input" id="inputNum1B1" placeholder="Nhập điểm thứ nhất" />
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <input type="number" class="form-control form__input" id="inputNum2B1" placeholder="Nhập điểm thứ 2" />
+                        </div>
+                         <div class="col-12 col-lg-4">
+                            <input type="number" class="form-control form__input" id="inputNum3B1" placeholder="Nhập điểm thứ 3" />
+                        </div>
+
+                        <div class="col-12">
+                            <button class="btn btn--primary" type="button" id="btnB1">
+                            Kết quả
+                                 </button>
+                        </div>
+                        <div class="content__text--output" role="alert">
+                            👉<span id="txtB1"></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="content_b2 content tran" id="content2">
+                    <h2>🔋 Tính tiền điện</h2>
+                    <div class="content__text">
+                        <h3>💡Gợi ý:</h3>
+                        <!-- <p>
+                            Nên tạo một dropdown để người dùng chọn thành viên cần gửi lời chào. Cách này sẽ hạn chế người dùng nhập sai nội dung.
+                        </p>
+                        <p>
+                           Mỗi thẻ option nên thêm value để dễ xử lý data sau khi lấy từ form.
+                        </p>
+                        <p>
+                           Nên sử dụng câu điều kiện if...else if... else. Hoặc dùng switch case
+                        </p> -->
+                        <!-- <ul>
+                            <li>Cách 1: Sử dụng các lệnh if else lồng nhau (mở rộng để xem thêm)</li>
+                            <li>Cách 2: Sử dụng các lệnh if else if else... (mở rộng để xem thêm)</li>
+                            <li>Flowchart điều kiện (mở rộng để xem thêm)</li>
+                            
+
+                        </ul> -->
+                    </div>
+                    <form class="row align-items-center  content__text--input">
+                        <div class="col-12 col-lg-4">
+                            <input type="text" class="form-control form__input" id="num1B2" placeholder="Nhậphọ tên">
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <input type="number" class="form-control form__input" id="num2B2" placeholder="Nhập số KW">
+                        </div>
+                        <!-- <div class="col-12 col-lg-4">
+                            <input type="number" class="form-control form__input" id="num3B2" placeholder="Nhập số thứ 3">
+                        </div> -->
+                       <!-- <select class="form-select  form__input col-12 col-lg-4" aria-label="Default select example" id="num1B2">
+                            <option value="1">Chọn Thành viên</option>
+                            <option value="2">Bố</option>
+                            <option value="3">Mẹ</option>
+                            <option value="4">Em Trai</option>
+                            <option value="5">Em Gái</option>
+
+                        </select> -->
+
+                        <div class="col-12">
+                            <button class="btn btn--primary " type="button" id="btnB2">Tính tiền điện</button>
+                        </div>
+                        <div class="content__text--output" role="alert">
+                            👉 <span id="txtB2"></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="content_b3 content tran" id="content3">
+                    <h2>💰 Tính thuế thu nhập cá nhân</h2>
+                    <div class="content__text">
+                        <h3>💡Gợi ý:</h3>
+                        <p>
+                            Để kiểm tra 1 số là chẵn hay lẻ thì ta đem số đó chia với 2. Nếu chia hết thì là số chẵn, ngược lại là số lẻ. (dùng toán tử %)
+                        </p>
+                         <p>
+                           Tạo biến để chứa giá trị khi đếm. Sau khi xác định được số đó chẵn hoặc lẻ thì tăng biến này lên 1 đơn vị (dùng các toán tử tăng: count++, count+=1 )
+                        </p>
+                         <p>
+                            🤔TIP: Chỉ cần đếm các số chẵn. Để xác định số lượng số lẻ ta chỉ cần lấy 3 trừ đi số lượng số chẵn đếm được (do chỉ nhập 3 số nguyên)
+                        </p>
+                      
+                    </div>
+                    <form class="row align-items-center content__text--input ">
+                        <div class="col-12 col-lg-4 ">
+                            <input type="text" class="form-control form__input " id="num1B3" placeholder="Nhập họ tên">
+                        </div>
+                         <div class="col-12 col-lg-4 ">
+                            <input type="text" class="form-control form__input " id="num2B3" placeholder="Nhập tổng thu nhập năm">
+                        </div>
+                         <div class="col-12 col-lg-4 ">
+                            <input type="text" class="form-control form__input " id="num3B3" placeholder="Nhập số người phụ thuộc">
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn--primary " type="button" id="btnB3">Đếm</button>
+                        </div>
+                        <div class="content__text--output " role="alert">
+                            👉 <span id="txtB3"></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="content_b4 content tran" id="content4">
+                    <h2>🔮 Đoán hình tam giác</h2>
+                    <div class="content__text ">
+                        <h3>💡Gợi ý:</h3>
+                        <p>
+                           Note: Chỉ cần xác định các loại tam giác cơ bản (vuông, đều, cân), các tam giác còn lại xếp loại là tam giác khác
+                        </p>
+                        <ul>
+                            <li>Cách xác định loại tam giác (mở rộng để xem thêm)</li>
+                           
+
+
+
+                        </ul>
+                    </div>
+                    <form class="row align-items-center content__text--input ">
+                        <div class="col-12 col-lg-4 ">
+                            <input type="text" class="form-control form__input " id="num1B4" placeholder="Nhập chiều dài 1">
+                        </div>
+                        <div class="col-12 col-lg-4 ">
+                            <input type="text" class="form-control form__input " id="num2B4" placeholder="NNhập chiều dài 2">
+                        </div>
+                        <div class="col-12 col-lg-4 ">
+                            <input type="text" class="form-control form__input " id="num3B4" placeholder="Nhập chiều dài 3">
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn--primary " type="button" id="btnB4">Dự đoán</button>
+                        </div>
+                        <div class="content__text--output" role="alert ">
+                            👉 <span id="txtB4"></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="content_b5 content tran" id="content5">
+                    <h2>📅 Tính ngày tháng năm</h2>
+                    <div class="content__text">
+                        <h3>💡Gợi ý:</h3>
+                        <p>
+                            Kiến thức áp dụng:
+                        </p>
+                        <ul>
+                            <li>Áp dụng cách tính như demo tổng 3 ký số trên lớp</li>
+
+
+
+                        </ul>
+                    </div>
+                    <form class="row align-items-center content__text--input ">
+                        <div class="col-12 col-lg-4 ">
+                            <input type="number " class="form-control form__input " id="num1B5" placeholder="Nhập số có 2 chử số">
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn--primary " type="button" id="btnB5">Tính</button>
+                        </div>
+                        <div class="content__text--output " role="alert ">
+                            👉 <span id="txtB5"></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+    <script src="./index.js "></script>
+</body>
+
+</html>
