@@ -218,12 +218,12 @@ function TinhTienCap() {
   if (x === "user") {
     TongTienCap = 4.5 + 20.5 + soKenh * 7.5;
   } else if (x === "company") {
-    if (soKenh <= 10) {
-      soKenhDN === 75;
+    if (soKetNoi <= 10) {
+      soKenhDN = 75;
     } else {
-      soKenhDN = (soKenh - 10) * 5 + 75;
+      soKenhDN = (soKetNoi - 10) * 5 + 75;
     }
-    TongTienCap = 15 + soKenhDN + soKetNoi * 50;
+    TongTienCap = 15 + soKenhDN + soKenh * 50;
   } else {
     alert("Chọn Loại khách hàng");
   }
