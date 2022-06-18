@@ -167,14 +167,18 @@ Nếu không thuộc khu vực hoặc đối tượng trong danh sách thì đi�
                     </form>
                 </div>
                 <div class="content_b4 content tran" id="content4">
-                    <h2>🔮 Đoán hình tam giác</h2>
+                    <h2>🕸️ Tính tiền cáp</h2>
                     <div class="content__text ">
                         <h3>💡Gợi ý:</h3>
                         <p>
-                           Note: Chỉ cần xác định các loại tam giác cơ bản (vuông, đều, cân), các tam giác còn lại xếp loại là tam giác khác
+                           
                         </p>
                         <ul>
-                            <li>Cách xác định loại tam giác (mở rộng để xem thêm)</li>
+                            <li>Sử dụng event onchange của dropdown để xử lý ẩn hiện cho ô nhập số kết nối khi chọn loại khách hàng: Onchange</li>
+                            <li>Đối với loại khách hàng Doanh Nghiệp, tổng 10 kết nối đầu là 75$
+=> đây là giá trọn gói, nếu doanh nghiệp lắp đặt số kết nối nhỏ hơn 10 thì vẫn phải đóng 75$.
+Vd: 6 kết nối thì vẫn sẽ cộng 75$ vào tổng tiền.
+=> Nếu lắp trên 10 kết nối thì kết nối thứ 11 trở đi sẽ tính 5$/kết nối.</li>
                            
 
 
@@ -182,24 +186,35 @@ Nếu không thuộc khu vực hoặc đối tượng trong danh sách thì đi�
                         </ul>
                     </div>
                     <form class="row align-items-center content__text--input ">
-                        <div class="col-12 col-lg-4 ">
-                            <input type="text" class="form-control form__input " id="num1B4" placeholder="Nhập chiều dài 1">
-                        </div>
-                        <div class="col-12 col-lg-4 ">
-                            <input type="text" class="form-control form__input " id="num2B4" placeholder="NNhập chiều dài 2">
-                        </div>
-                        <div class="col-12 col-lg-4 ">
-                            <input type="text" class="form-control form__input " id="num3B4" placeholder="Nhập chiều dài 3">
-                        </div>
-                        <div class="col-12">
-                            <button class="btn btn--primary " type="button" id="btnB4">Dự đoán</button>
-                        </div>
-                        <div class="content__text--output" role="alert ">
+                        <div class="col-12  col-lg-4">
+                                    <select class="form-control form__input" name="" id="selCustomer" onchange="disableInput()">
+                                        <option value="">Chọn loại khách hàng</option>
+                                        <option value="user">Nhà Dân</option>
+                                        <option value="company">Doanh Nghiệp</option>                                      
+                                    </select>
+                                </div>     
+                                <div class="col-12 col-lg-4">
+                                    <input type="text" class="form-control form__input" id="inputID" placeholder="Nhập mã khách hàng">
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <input type="number" class="form-control form__input" id="inputChanel" placeholder="Số kênh cao cấp">
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <input type="number" style="display: none;" class="form-control form__input" id="inputConnect" placeholder="Số kết nối">
+                                </div>
+                               
+
+
+                                <div class="col-12">
+                                    <button class="btn btn--primary me-1 mb-1" type="button" id="btnB4">Tính tiền
+                                        cáp</button>
+                                </div>
+                                <div class="content__text--output " role="alert">
                             👉 <span id="txtB4"></span>
                         </div>
                     </form>
                 </div>
-                <div class="content_b5 content tran" id="content5">
+                <!-- <div class="content_b5 content tran" id="content5">
                     <h2>📅 Tính ngày tháng năm</h2>
                     <div class="content__text">
                         <h3>💡Gợi ý:</h3>
@@ -224,7 +239,7 @@ Nếu không thuộc khu vực hoặc đối tượng trong danh sách thì đi�
                             👉 <span id="txtB5"></span>
                         </div>
                     </form>
-                </div>
+                </div> -->
             </div>
 
         </div>

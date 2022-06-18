@@ -198,3 +198,38 @@ function ThueThuNhapCaNhan() {
 document.getElementById("btnB3").onclick = function () {
   ThueThuNhapCaNhan();
 };
+
+function disableInput() {
+  var x = document.getElementById("selCustomer").value;
+  console.log(x == "user");
+  if (x === "company") {
+    document.getElementById("inputConnect").style.display = "block";
+  } else {
+    document.getElementById("inputConnect").style.display = "none";
+  }
+}
+function TinhTienCap() {
+  var x = document.getElementById("selCustomer").value;
+  var maKhachhang = document.getElementById("inputID").value;
+  var soKenh = Number(document.getElementById("inputChanel").value);
+  var soKetNoi = Number(document.getElementById("inputConnect").value);
+  var TongTienCap = 0;
+  var soKenhDN = 0;
+  if (x === "user") {
+    TongTienCap = 4.5 + 20.5 + soKenh * 7.5;
+  } else if (x === "company") {
+    if (soKenh <= 10) {
+      soKenhDN === 75;
+    } else {
+      soKenhDN = (soKenh - 10) * 5 + 75;
+    }
+    TongTienCap = 15 + soKenhDN + soKetNoi * 50;
+  } else {
+    alert("Chọn Loại khách hàng");
+  }
+  document.getElementById("txtB4").innerHTML =
+    "Mã khách hàng:" + maKhachhang + " " + "Tiền cáp:$" + TongTienCap;
+}
+document.getElementById("btnB4").onclick = function () {
+  TinhTienCap();
+};
